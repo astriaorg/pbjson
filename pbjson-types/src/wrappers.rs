@@ -34,7 +34,7 @@ macro_rules! ser_bytes_value {
             {
                 use pbjson::private::base64::engine::Engine;
                 let value =
-                    pbjson::private::base64::engine::general_purpose::STANDARD.encode(&self.value);
+                    pbjson::private::base64::engine::general_purpose::URL_SAFE.encode(&self.value);
                 value.serialize(ser)
             }
         }
